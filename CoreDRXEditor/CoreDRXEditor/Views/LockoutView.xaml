@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoreDRXEditor.Views.LockoutView">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Application locked out." TextColor="Red" FontSize="Large" />
+            <Label x:Name="lockoutId" Text="Security lockout ID: Unknown" TextColor="Red" FontSize="Medium" />
+            <Label Text="All application data has been wiped. Contact an administrator for application reprovisioning." TextColor="Red" FontSize="Small" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

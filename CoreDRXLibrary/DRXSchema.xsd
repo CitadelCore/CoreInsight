@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DRXSchema"
+    targetNamespace="core://drx.schema.core/schemas/DRXSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="core://drx.schema.core/schemas/DRXSchema.xsd"
+    xmlns:mstns="core://drx.schema.core/schemas/DRXSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="drx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" name="header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="1" minOccurs="1" type="xs:string" name="friendlyName"></xs:element>
+              <xs:element maxOccurs="1" minOccurs="1" type="xs:string" name="secLevel"></xs:element>
+              <xs:element maxOccurs="1" minOccurs="1" type="xs:boolean" name="redactions"></xs:element>
+              <xs:element maxOccurs="1" minOccurs="1" name="flags">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="flag" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="1" type="xs:string" name="setting"></xs:element>
+              <xs:element maxOccurs="1" minOccurs="1" type="xs:dateTime" name="date"></xs:element>
+              <xs:element maxOccurs="1" minOccurs="1" type="xs:string" name="status"></xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="1" minOccurs="1" type="xs:string" name="body"></xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:integer" use="required" />
+      <xs:attribute name="fileRevision" type="xs:double" use="required" />
+      <xs:attribute name="bodyHash" type="xs:string" use="optional" />
+      <xs:attribute name="series" type="xs:integer" use="required" />
+      <xs:attribute name="encryptionEnabled" type="xs:boolean" use="required" />
+      <xs:attribute name="encryptionVersion" type="xs:double" use="optional" />
+      <xs:attribute name="encryptionWrapper" type="xs:string" use="optional" />
+      <xs:attribute name="encryptionType" type="xs:string" use="optional" />
+      <xs:attribute name="encryptionKey" type="xs:string" use="optional" />
+      <xs:attribute name="encryptionSerial" type="xs:string" use="optional" />
+      <xs:attribute name="vividity" type="xs:integer" use="optional"></xs:attribute>
+      <xs:attribute name="remembrance" type="xs:integer" use="optional"></xs:attribute>
+      <xs:attribute name="emotion" type="xs:integer" use="optional"></xs:attribute>
+      <xs:attribute name="length" type="xs:integer" use="optional"></xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

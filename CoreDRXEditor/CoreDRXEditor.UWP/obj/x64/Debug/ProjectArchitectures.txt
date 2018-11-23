@@ -1,0 +1,1 @@
+C:\Users\josephmarsden.TOWER\source\repos\CoreInsight\CoreDRXEditor.UWP\CoreDRXEditor.UWP.csproj;x64

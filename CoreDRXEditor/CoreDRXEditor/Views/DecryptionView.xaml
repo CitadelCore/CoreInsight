@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoreDRXEditor.Views.DecryptionView">
+    <ContentPage.Content>
+        <StackLayout x:Name="pageLayout" HorizontalOptions="Center" VerticalOptions="Center" Margin="20" WidthRequest="450">
+            <Label Text="Restricted access" TextColor="Red" FontSize="20" />
+            <Label x:Name="InstructionText" Text="Enter your password to decrypt the document." FontSize="15" />
+            <Label x:Name="WarningText" Text="If you click Abort, the decryption will be cancelled. The attempt will be reported. Decryption will time out in 01:00:00." TextColor="Red" FontSize="15" />
+            <Entry x:Name="PasswordEntry" IsPassword="True" />
+
+            <Label x:Name="SecurityText" Text="Security Restriction Level: UKN (Unknown)" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="60*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Button x:Name="AbortButton" Text="Abort" TextColor="Red" FontSize="20" Grid.Column="0" Grid.Row="0" />
+                <Button x:Name="DecryptButton" Text="Decrypt" FontSize="20" Grid.Column="1" Grid.Row="0" />
+            </Grid>
+
+            <Label Text="This is a restricted access area which is subject to a non-disclosure agreement. Unauthorized users prohibited. Violations are punishable by law." TextColor="Red" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

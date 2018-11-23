@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoreDRXEditor.Views.DocumentSettingsView">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center" WidthRequest="550" Padding="25">
+                <Label Text="General" FontSize="Large" />
+
+                <Label x:Name="drxId" Text="DRX ID: 000" FontSize="Medium" />
+                <Label Text="The DRX ID is permanent and cannot be changed." FontSize="Micro" />
+
+                <Label Text="Title: " FontSize="Medium" />
+                <Entry x:Name="drxTitleEntry" />
+                <Label Text="The title is displayed in the document list." FontSize="Micro" />
+
+                <Label Text="Categorization" FontSize="Large" />
+
+                <Label Text="Setting" FontSize="Medium" />
+                <Editor x:Name="settingEntry" HeightRequest="60"/>
+                <Label Text="The setting represents the place where the DRX is set and is optional." FontSize="Micro" />
+
+                <Label Text="Flags" FontSize="Medium" />
+                <Button x:Name="setFlagsButton" Text="Set flags" />
+                <Label Text="Flags are a way to tag your document so it can be easily be searched later." FontSize="Micro"  />
+
+                <Label Text="Security" FontSize="Large" />
+                <Label Text="Security Level" FontSize="Medium" />
+                <Picker x:Name="securityLevelPicker">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>PLC (Public)</x:String>
+                            <x:String>CNF (Confidential)</x:String>
+                            <x:String>SCT (Secret)</x:String>
+                            <x:String>TSCT (Top Secret)</x:String>
+                            <x:String>THL (Thaumiel)</x:String>
+                            <x:String>BG (BlackGold)</x:String>
+                            <x:String>SV (StormVault)</x:String>
+                            <x:String>DIT (DIT Vault)</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="The security level designates the security policies that must be applied to the document. Higher security levels will enable more flags." FontSize="Micro"  />
+
+                <Label x:Name="encryptionTypeLabel" Text="Encryption Type: Certificate" FontSize="Medium" />
+                <Label Text="The encryption type determines how your document is encrypted. Types are CoreServer (reccomended) or Password and Certificate (deprecated)." FontSize="Micro"  />
+                <Label x:Name="encryptionWarningLabel" Text="Per-document encryption is being deprecated and will be removed in a later version. Please migrate to CoreServer encryption with per-application key provisioning so you can continue to use the full benefits of Certificate and Smart Card encryption." FontSize="Micro" TextColor="Red" />
+
+                <Button x:Name="convertToMachineKey" Text="Migrate to CoreServer Encryption" />
+                <Label Text="Migrates ALL documents in the current database to use CoreServer encryption. Once you migrate you can't go back, so be sure you are ready." FontSize="Micro"  />
+
+                <Button x:Name="changeCertificateButton" Text="Change Certificate" />
+                <Label Text="Changes the certificate used to decrypt the document to a different one." FontSize="Micro"  />
+
+                <Button x:Name="saveChangesButton" Text="Save Changes" WidthRequest="250" HorizontalOptions="Center" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

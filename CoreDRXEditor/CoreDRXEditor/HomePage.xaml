@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CoreDRXEditor"
+             x:Class="CoreDRXEditor.HomePage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Welcome to DRX Editor" FontSize="Large" />
+            <Label Text="CoreInsight Edition" FontSize="Small" />
+            <StackLayout WidthRequest="250">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width="50*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                
+                <Button x:Name="openDocumentButton" Text="Open Document" Grid.Column="0" Grid.Row="0" />
+                <Button x:Name="newDocument" Text="New Document" Grid.Column="1" Grid.Row="0" />
+                <Button x:Name="settingsButton" Text="Settings" Grid.Column="2" Grid.Row="0" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

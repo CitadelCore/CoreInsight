@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoreDynamic.Views.PleaseWaitPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="20">
+            <Label Text="This might take a moment." FontSize="20" />
+            <Label x:Name="StatusText" Text="Please wait." FontSize="15" />
+            <ActivityIndicator Color="Red" IsRunning="True" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

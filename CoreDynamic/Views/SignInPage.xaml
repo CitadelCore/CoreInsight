@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoreDynamic.Views.SignInPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="40">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+
+                <Label
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="Username"/>
+                <Entry x:Name="UsernameEntry" 
+                       Grid.Column="2"
+                       Grid.Row="1"/>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="signInTowerButton" Text="Sign in with TOWER" Grid.Column="1" Grid.Row="1"/>
+                <Button x:Name="skipSignInButton" Text="Continue without CoreServer" Grid.Column="2" Grid.Row="1" />
+            </Grid>
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
